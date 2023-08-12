@@ -1,5 +1,5 @@
 {
-    "name": "𝐃𝐀𝐗𝐗ダ ᴍᴜsɪᴄ",
+    "name": "𝐃𝐀𝐗𝐗",
     "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
     "logo": "https://graph.org/file/1190888142bb70dae65af.jpg",
     "keywords": [
@@ -34,7 +34,7 @@
       },
       "MUSIC_BOT_NAME": {
         "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
-        "value": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
+        "value": "𝐃ɛʂꙷʈͦɪͧղͬ𝐘...",
         "required": true
       },
       "OWNER_ID": {
