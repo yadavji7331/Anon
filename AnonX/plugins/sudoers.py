@@ -21,7 +21,7 @@ SUDOUSERS_COMMAND = get_command("SUDOUSERS_COMMAND")
 async def useradd(client, message: Message, _):
     if MONGO_DB_URI is None:
         return await message.reply_text(
-            f"**ᴅᴜᴇ ᴛᴏ {MUSIC_BOT_NAME}'s ᴩʀɪᴠᴀᴄʏ ɪssᴜᴇs, ʏᴏᴜ ᴄᴀɴ'ᴛ ᴍᴀɴᴀɢᴇ sᴜᴅᴏ ᴜsᴇʀs ᴏɴ {MUSIC_BOT_NAME} ᴅᴀᴛᴀʙᴀsᴇ.\n\n ᴩʟᴇᴀsᴇ ᴀᴅᴅ ʏᴏᴜʀ ᴍᴏɴɢᴏ ᴅᴀᴛᴀʙᴀsᴇ ɪɴ ᴠᴀʀs ᴛᴏ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ.**"
+            f"*😨*ᴅᴜᴇ ᴛᴏ {MUSIC_BOT_NAME}'s ᴩʀɪᴠᴀᴄʏ ɪssᴜᴇs, ʏᴏᴜ ᴄᴀɴ'ᴛ ᴍᴀɴᴀɢᴇ sᴜᴅᴏ ᴜsᴇʀs ᴏɴ {MUSIC_BOT_NAME} ᴅᴀᴛᴀʙᴀsᴇ.\n\n ᴩʟᴇᴀsᴇ ᴀᴅᴅ ʏᴏᴜʀ ᴍᴏɴɢᴏ ᴅᴀᴛᴀʙᴀsᴇ ɪɴ ᴠᴀʀs ᴛᴏ ᴜsᴇ ᴛʜɪs ғᴇᴀᴛᴜʀᴇ.**"
         )
     if not message.reply_to_message:
         if len(message.command) != 2:
