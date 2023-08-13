@@ -98,7 +98,7 @@ async def ping_com(client, message: Message, _):
 📌**ᴛɪᴛʟᴇ:** {title}
 
 🍒**ᴛʏᴩᴇ:** {typo}
-💖**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:** {user}
+♥️**ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ:** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, "c" if cplay else "g", videoid)
