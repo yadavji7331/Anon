@@ -28,7 +28,7 @@ async def playmode_(client, message: Message, _):
     query = message.text.split(None, 2)[1].lower().strip()
     if (str(query)).lower() == "disable":
         await set_cmode(message.chat.id, None)
-        return await message.reply_text(f"ᴄʜᴀɴɴᴇʟ ᴩʟᴀʏ ᴅɪsᴀʙʟᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ʙʏ {message.from_user.first_name} ɪɴ {message.chat.title}")
+        return await message.reply_text(f"ᴄʜᴀɴɴᴇʟ ᴩʟᴀʏ ᴅɪsᴀʙʟᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ🎉 ʙʏ {message.from_user.first_name} ɪɴ {message.chat.title}")
     elif str(query) == "linked":
         chat = await app.get_chat(message.chat.id)
         if chat.linked_chat:
