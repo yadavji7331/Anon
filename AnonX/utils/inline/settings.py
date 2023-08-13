@@ -8,7 +8,7 @@ def setting_markup(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="ᴀᴜᴅɪᴏ ǫᴜᴀʟɪᴛʏ", callback_data="AQ"
+                text="ᴀᴜᴅɪᴏ 😒ǫᴜᴀʟɪᴛʏ", callback_data="AQ"
             ),
             InlineKeyboardButton(
                 text="ᴠɪᴅᴇᴏ ǫᴜᴀʟɪᴛʏ", callback_data="VQ"
