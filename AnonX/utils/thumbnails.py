@@ -112,8 +112,8 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((400, 400), Image.LANCZOS)
         width = int((1280 - 400) / 1)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 1, 238), mask=logo)
-        background.paste(x, (1050, 427), mask=x)
+        background.paste(logo, (width + 1, 438), mask=logo)
+        background.paste(x, (900, 427), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
@@ -134,7 +134,7 @@ async def gen_thumb(videoid, user_id):
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 2, 530),
+                    ((1280 - text_w) / 3, 138),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -144,7 +144,7 @@ async def gen_thumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 2, 580),
+                    ((1280 - text_w) / 3, 180),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
