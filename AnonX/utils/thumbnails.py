@@ -112,7 +112,7 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((395, 395), Image.LANCZOS)
         width = int((1280 - 395) / 1)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 1, 35), mask=logo)
+        background.paste(logo, (width + 1, 27), mask=logo)
         background.paste(x, (780, 445), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
@@ -124,7 +124,7 @@ async def gen_thumb(videoid, user_id):
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
-                (450, 30),
+                (100, 35),
                 f"STARTED PLAYING",
                 fill="white",
                 stroke_width=3,
@@ -134,7 +134,7 @@ async def gen_thumb(videoid, user_id):
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 3, 137),
+                    ((1280 - 1200) / 3, 137),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -144,7 +144,7 @@ async def gen_thumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 3, 179),
+                    ((1280 - 1200) / 3, 179),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -155,8 +155,8 @@ async def gen_thumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - text_w) / 2, 660),
-            f"Duration: {duration} Mins",
+            ((1280 - text_w) / 2, 600),
+            f"{duration}",
             fill="white",
             font=arial,
         )
@@ -264,7 +264,7 @@ async def gen_qthumb(videoid, user_id):
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
-                (455, 25),
+                (100, 28),
                 "ADDED TO QUEUE",
                 fill="white",
                 stroke_width=5,
