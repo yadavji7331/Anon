@@ -109,10 +109,10 @@ async def gen_thumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((395, 395), Image.LANCZOS)
-        width = int((1280 - 395) / 10)
+        logo.thumbnail((400, 400), Image.LANCZOS)
+        width = int((1280 - 400) / 1)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 10, 29), mask=logo)
+        background.paste(logo, (width + 1, 29), mask=logo)
         background.paste(x, (780, 445), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
