@@ -18,8 +18,8 @@ def help_pannel(_, START: Union[bool, int] = None):
            
         ),
         InlineKeyboardButton(
-            text="𝐃ɛʂꙷʈͦɪͧղͬ𝐘...",
-            url=f"t.me/daxxsir3",
+            text="𝄟‌≛⃝🥀𝗠ʘ𝖔𝒏ใïᧁ𝒉𝐭⎯꯭‌𝆺꯭𝅥✗𝐃᭄𓆪ꪾ🥀",
+            url=f"t.me/Moon_here_1",
         ),
         InlineKeyboardButton(
             text="𝙽𝚎𝚡𝚝 ➥", callback_data="help_callback hb13"
