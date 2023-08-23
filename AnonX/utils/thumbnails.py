@@ -125,7 +125,7 @@ async def gen_thumb(videoid, user_id):
         try:
             draw.text(
                 (190, 44),
-                f"ꜱᴛᴀʀᴛᴇᴅ ᴘʟᴀʏɪɴɢ",
+                f"",
                 fill="white",
                 stroke_width=3,
                 stroke_fill="grey",
@@ -227,7 +227,7 @@ async def gen_qthumb(videoid, user_id):
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(20))
         enhancer = ImageEnhance.Brightness(background)
-        background = enhancer.enhance(0.6)
+        background = enhancer.enhance(0.5)
 
         image3 = changeImageSize(1280, 720, bg)
         image5 = image3.convert("RGBA")
