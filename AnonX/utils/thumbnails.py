@@ -126,7 +126,7 @@ async def gen_thumb(videoid, user_id):
             draw.text(
                 (190, 44),
                 f"STARTED STREAM",
-                fill="Dark Blue",
+                fill="White",
                 stroke_width=3,
                 stroke_fill="grey",
                 font=font,
