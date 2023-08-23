@@ -30,53 +30,53 @@ def help_pannel(_, START: Union[bool, int] = None):
         [
             [
                 InlineKeyboardButton(
-                    text="🤴𝙰𝚍𝚖𝚒𝚗🤴",
+                    text="𝙰𝚍𝚖𝚒𝚗",
                     callback_data="help_callback hb1",
                 ),
                 InlineKeyboardButton(
-                    text="👤𝙰𝚞𝚝𝚑👤",
+                    text="𝙰𝚞𝚝𝚑"
                     callback_data="help_callback hb2",
                 ),
             
                 InlineKeyboardButton(
-                    text=" 🫐𝙱𝚕𝚘𝚌𝚔 🫐",
+                    text="𝙱𝚕𝚘𝚌𝚔",
                     callback_data="help_callback hb3",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🔊𝚋𝚛𝚘𝚊𝚍𝚌𝚊𝚜𝚝🔊",
+                    text="𝚋-𝚌𝚊𝚜𝚝",
                     callback_data="help_callback hb4",
                 ),
                 InlineKeyboardButton(
-                    text="🤕🚫𝚄𝚜𝚎𝚛𝚋𝚊𝚗🤕🚫",
+                    text="𝚋𝚊𝚗🚫",
                     callback_data="help_callback hb12",
                 ),
                 InlineKeyboardButton(
-                    text="𝙻𝚢𝚛𝚒𝚌𝚜 ⌕",
+                    text="𝙻𝚢𝚛𝚒𝚌𝚜",
                     callback_data="help_callback hb5",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="𝚂𝚘𝚗𝚐 𝚙𝚕𝚊𝚢𝚕𝚒𝚜𝚝 𓋜",
+                    text="𝚙-𝚕𝚒𝚜𝚝",
                     callback_data="help_callback hb6",
                 ),
                 InlineKeyboardButton(
-                    text="🎙️𝚅𝚘𝚒𝚌𝚎 𝚌𝚑𝚊𝚝 ⎋",
+                    text="𝚅-𝚌𝚑𝚊𝚝",
                     callback_data="help_callback hb10",
                 ),
             ],
             [
            
                 InlineKeyboardButton(
-                    text="🎵𝚙𝚕𝚊𝚢𓋜",
+                    text="𝚙𝚕𝚊𝚢",
                     callback_data="help_callback hb8",
                 ),
             
             
                 InlineKeyboardButton(
-                    text="👑𝙲𝚘 𝙰𝚍𝚖𝚒𝚗 ✯",
+                    text="𝙲𝚘-𝙰𝚍𝚖𝚒𝚗✯",
                     callback_data="help_callback hb9",
                 ),
             ],
@@ -117,7 +117,7 @@ def private_help_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text="【𝙷𝚎𝚕𝚙】",
+                text="𝙷𝚎𝚕p",
                 callback_data="settings_back_helper",
             ),
         ],
