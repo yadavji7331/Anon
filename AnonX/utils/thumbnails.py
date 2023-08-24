@@ -112,9 +112,9 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((1000, 1000), Image.LANCZOS)
         width = int((1280 - 1000) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 2, 30), mask=logo)
+        background.paste(logo, (width + 2, 20), mask=logo)
         background.paste(x, (780, 44500), mask=x)
-        background.paste(image3, (3, 3), mask=image3)
+        background.paste(image3, (5, 5), mask=image3)
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
