@@ -14,25 +14,25 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     anon = math.floor(percentage)
     if 0 < anon <= 10:
-        bar = "◉—————————"
+        bar = "✦ᴅᴀxx✦—————————"
     elif 10 < anon < 20:
-        bar = "—◉————————"
+        bar = "—✦ᴅᴀxx✦————————"
     elif 20 <= anon < 30:
-        bar = "——◉———————"
+        bar = "——✦ᴅᴀxx✦———————"
     elif 30 <= anon < 40:
-        bar = "———◉——————"
+        bar = "———✦ᴅᴀxx✦——————"
     elif 40 <= anon < 50:
-        bar = "————◉—————"
+        bar = "————✦ᴅᴀxx✦—————"
     elif 50 <= anon < 60:
-        bar = "—————◉————"
+        bar = "—————✦ᴅᴀxx✦————"
     elif 60 <= anon < 70:
-        bar = "——————◉———"
+        bar = "——————✦ᴅᴀxx✦———"
     elif 70 <= anon < 80:
-        bar = "———————◉——"
+        bar = "———————✦ᴅᴀxx✦——"
     elif 80 <= anon < 95:
-        bar = "————————◉—"
+        bar = "————————✦ᴅᴀxx✦—"
     else:
-        bar = "—————————◉"
+        bar = "—————————✦ᴅᴀxx✦"
 
     buttons = [
         [
@@ -43,25 +43,38 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="▷",
+                text="⏭",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
+                text="⏸", callback_data=f"ADMIN Pause|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="☆", callback_data=f"add_playlist {videoid}"
+                text="🔘", callback_data=f"add_playlist {videoid}"
             ),
             InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+                text="⏮", callback_data=f"ADMIN Skip|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+                text="⏹", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="ɢʀᴏᴜᴘ", url=config.SUPPORT_GROUP
+            ),
+            InlineKeyboardButton(
+                text="ᴄʜᴀɴɴᴇʟ", url=config.SUPPORT_CHANNEL
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴏᴡɴᴇʀ", url=f"https://t.me/daxxsir3"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴄʟᴏꜱᴇ", callback_data=f"close"
             )
         ],
     ]
@@ -74,25 +87,25 @@ def telegram_markup_timer(_, chat_id, played, dur):
     percentage = (played_sec / duration_sec) * 100
     anon = math.floor(percentage)
     if 0 < anon <= 10:
-        bar = "◉—————————"
+        bar = "✦ᴅᴀxx✦—————————"
     elif 10 < anon < 20:
-        bar = "—◉————————"
+        bar = "—✦ᴅᴀxx✦————————"
     elif 20 <= anon < 30:
-        bar = "——◉———————"
+        bar = "——✦ᴅᴀxx✦———————"
     elif 30 <= anon < 40:
-        bar = "———◉——————"
+        bar = "———✦ᴅᴀxx✦——————"
     elif 40 <= anon < 50:
-        bar = "————◉—————"
+        bar = "————✦ᴅᴀxx✦—————"
     elif 50 <= anon < 60:
-        bar = "—————◉————"
+        bar = "—————✦ᴅᴀxx✦————"
     elif 60 <= anon < 70:
-        bar = "——————◉———"
+        bar = "——————✦ᴅᴀxx✦———"
     elif 70 <= anon < 80:
-        bar = "———————◉——"
+        bar = "———————✦ᴅᴀxx✦——"
     elif 80 <= anon < 95:
-        bar = "————————◉—"
+        bar = "————————✦ᴅᴀxx✦—"
     else:
-        bar = "—————————◉"
+        bar = "—————————✦ᴅᴀxx✦"
 
     buttons = [
         [
@@ -103,22 +116,35 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="▷",
+                text="⏭",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
+                text="⏸", callback_data=f"ADMIN Pause|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+                text="⏮", callback_data=f"ADMIN Skip|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+                text="⏹", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="ɢʀᴏᴜᴘ", url=config.SUPPORT_GROUP
+            ),
+            InlineKeyboardButton(
+                text="ᴄʜᴀɴɴᴇʟ", url=config.SUPPORT_CHANNEL
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴏᴡɴᴇʀ", url=f"https://t.me/daxxsir3"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴄʟᴏꜱᴇ", callback_data=f"close"
             )
         ],
     ]
@@ -129,25 +155,38 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="▷",
+                text="⏭",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
+                text="⏸", callback_data=f"ADMIN Pause|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="☆", callback_data=f"add_playlist {videoid}"
+                text="🔘", callback_data=f"add_playlist {videoid}"
             ),
             InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+                text="⏮", callback_data=f"ADMIN Skip|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+                text="⏹", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="ɢʀᴏᴜᴘ", url=config.SUPPORT_GROUP
+            ),
+            InlineKeyboardButton(
+                text="ᴄʜᴀɴɴᴇʟ", url=config.SUPPORT_CHANNEL
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴏᴡɴᴇʀ", url=f"https://t.me/daxxsir3"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴄʟᴏꜱᴇ", callback_data=f"close"
             )
         ],
     ]
@@ -158,22 +197,35 @@ def telegram_markup(_, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="▷",
+                text="⏭",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
+                text="⏸", callback_data=f"ADMIN Pause|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+                text="⏮", callback_data=f"ADMIN Skip|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+                text="⏹", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="ɢʀᴏᴜᴘ", url=config.SUPPORT_GROUP
+            ),
+            InlineKeyboardButton(
+                text="ᴄʜᴀɴɴᴇʟ", url=config.SUPPORT_CHANNEL
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴏᴡɴᴇʀ", url=f"https://t.me/daxxsir3"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴄʟᴏꜱᴇ", callback_data=f"close"
             )
         ],
     ]
@@ -276,7 +328,7 @@ def slider_markup(
         ],
         [
             InlineKeyboardButton(
-                text="◁",
+                text="⏭",
                 callback_data=f"slider B|{query_type}|{query}|{user_id}|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
@@ -284,7 +336,7 @@ def slider_markup(
                 callback_data=f"forceclose {query}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="▷",
+                text="⏮",
                 callback_data=f"slider F|{query_type}|{query}|{user_id}|{channel}|{fplay}",
             ),
         ],
@@ -297,7 +349,10 @@ close_keyboard = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+                        text="ᴄʟᴏꜱᴇ", callback_data="close"
+                    ),
+                    InlineKeyboardButton(
+                text="ᴏᴡɴᴇʀ", url=f"https://t.me/daxxsir3"
                     )
                 ]    
             ]
@@ -310,26 +365,40 @@ def queue_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="▷",
+                text="⏭",
                 callback_data=f"ADMIN Resume|{chat_id}",
             ),
             InlineKeyboardButton(
-                text="II", callback_data=f"ADMIN Pause|{chat_id}"
+                text="⏸", callback_data=f"ADMIN Pause|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="☆", callback_data=f"add_playlist {videoid}"
+                text="🔘", callback_data=f"add_playlist {videoid}"
             ),
             InlineKeyboardButton(
-                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+                text="⏮", callback_data=f"ADMIN Skip|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
+                text="⏹", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="ɢʀᴏᴜᴘ", url=config.SUPPORT_GROUP
+            ),
+            InlineKeyboardButton(
+                text="ᴄʜᴀɴɴᴇʟ", url=config.SUPPORT_CHANNEL
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴏᴡɴᴇʀ", url=f"https://t.me/daxxsir3"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="ᴄʟᴏꜱᴇ", callback_data=f"close"
             )
         ],
     ]
     return buttons
+    
