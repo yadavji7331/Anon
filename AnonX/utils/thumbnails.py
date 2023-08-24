@@ -112,9 +112,9 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((900, 900), Image.LANCZOS)
         width = int((1280 - 900) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 2, 40), mask=logo)
+        background.paste(logo, (width + 2, 20), mask=logo)
         background.paste(x, (780, 44500), mask=x)
-        background.paste(image3, (5, 5), mask=image3)
+        background.paste(image3, (3, 3), mask=image3)
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
@@ -124,11 +124,11 @@ async def gen_thumb(videoid, user_id):
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
-                (55, 44),
+                (550, 60),
                 f"DeepanshuXD",
                 fill="White",
-                stroke_width=3,
-                stroke_fill="grey",
+                stroke_width=5,
+                stroke_fill="blue",
                 font=font,
             )
             if para[0]:
