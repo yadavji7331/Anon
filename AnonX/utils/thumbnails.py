@@ -109,11 +109,11 @@ async def gen_thumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((400, 400), Image.LANCZOS)
-        width = int((1280 - 400) / 1)
+        logo.thumbnail((1200, 1200), Image.LANCZOS)
+        width = int((1280 - 1200) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 1, 28), mask=logo)
-        background.paste(x, (780, 445), mask=x)
+        background.paste(logo, (width + 2, 140), mask=logo)
+        background.paste(x, (780, 44500), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
@@ -124,8 +124,8 @@ async def gen_thumb(videoid, user_id):
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
-                (190, 44),
-                f"STARTED STREAM",
+                (55, 44),
+                f"DeepanshuXD",
                 fill="White",
                 stroke_width=3,
                 stroke_fill="grey",
@@ -134,7 +134,7 @@ async def gen_thumb(videoid, user_id):
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - 1105) / 3, 137),
+                    ((1280 - 1105) / 3, 13700),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -144,7 +144,7 @@ async def gen_thumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - 1105) / 3, 190),
+                    ((1280 - 1105) / 3, 19000),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -155,7 +155,7 @@ async def gen_thumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - 40) / 2, 600),
+            ((1280 - 40) / 2, 60000),
             f"{duration}",
             fill="white",
             font=arial,
