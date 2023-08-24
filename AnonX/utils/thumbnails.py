@@ -110,18 +110,18 @@ async def gen_thumb(videoid, user_id):
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
         logo.thumbnail((360, 360), Image.ANTIALIAS)
-        width = int((1280 - 360) / 2)
+        width = int((1280 - 360) / 1.50)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 20), mask=logo)
         background.paste(x, (140, 140), mask=x)
         background.paste(image3, (2, 2), mask=image3)
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
-        ImageFont.truetype("AnonX/assets/font2.ttf", 70)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 30)
-        ImageFont.truetype("AnonX/assets/font.ttf", 30)
-        para = textwrap.wrap(title, width=32)
+        font = ImageFont.truetype("AnonX/assets/font2.ttf", 40)
+        ImageFont.truetype("AnonX/assets/font2.ttf", 65)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 27)
+        ImageFont.truetype("AnonX/assets/font.ttf", 27)
+        para = textwrap.wrap(title, width=30)
         try:
             draw.text(
                 (450, 25),
@@ -134,7 +134,7 @@ async def gen_thumb(videoid, user_id):
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 1, 380),
+                    ((1280 - text_w) / 1, 360),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -144,7 +144,7 @@ async def gen_thumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 1, 430),
+                    ((1280 - text_w) / 1, 400),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -155,8 +155,8 @@ async def gen_thumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - text_w) / 1, 560),
-            f"Duration: {duration} Mins",
+            ((1280 - text_w) / 1, 540),
+            f"{duration}",
             fill="white",
             font=arial,
         )
