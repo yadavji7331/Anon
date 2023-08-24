@@ -89,7 +89,7 @@ async def gen_thumb(videoid, user_id):
         enhancer = ImageEnhance.Brightness(background)
         background = enhancer.enhance(0.6)
 
-        image3 = changeImageSize(1280, 1200, bg)
+        image3 = changeImageSize(1280, 720, bg)
         image5 = image3.convert("RGBA")
         Image.alpha_composite(background, image5).save(f"cache/temp{videoid}.png")
 
@@ -109,12 +109,12 @@ async def gen_thumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((1200, 1200), Image.LANCZOS)
-        width = int((1280 - 1200) / 2)
+        logo.thumbnail((900, 900), Image.LANCZOS)
+        width = int((1280 - 900) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 140), mask=logo)
         background.paste(x, (780, 44500), mask=x)
-        background.paste(image3, (0, 0), mask=image3)
+        background.paste(image3, (5, 5), mask=image3)
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
