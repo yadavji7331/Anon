@@ -95,9 +95,9 @@ async def gen_thumb(videoid, user_id):
 
         Xcenter = youtube.width / 2
         Ycenter = youtube.height / 2
-        x1 = Xcenter - 230
+        x1 = Xcenter - 150
         y1 = Ycenter - 230
-        x2 = Xcenter + 230
+        x2 = Xcenter + 150
         y2 = Ycenter + 230
         logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((520, 520), Image.ANTIALIAS)
@@ -113,7 +113,7 @@ async def gen_thumb(videoid, user_id):
         width = int((1280 - 500) / 1)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 30), mask=logo)
-        background.paste(x, (250, 190), mask=x)
+        background.paste(x, (200, 190), mask=x)
         background.paste(image3, (2, 2), mask=image3)
 
         draw = ImageDraw.Draw(background)
