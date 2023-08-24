@@ -109,8 +109,8 @@ async def gen_thumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((900, 900), Image.LANCZOS)
-        width = int((1280 - 900) / 2)
+        logo.thumbnail((720, 720), Image.LANCZOS)
+        width = int((1280 - 720) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 20), mask=logo)
         background.paste(x, (780, 44500), mask=x)
@@ -124,10 +124,10 @@ async def gen_thumb(videoid, user_id):
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
-                (550, 60),
+                (500, 60),
                 f"DeepanshuXD",
                 fill="White",
-                stroke_width=5,
+                stroke_width=3,
                 stroke_fill="blue",
                 font=font,
             )
