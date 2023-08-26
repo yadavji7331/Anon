@@ -236,9 +236,9 @@ async def gen_qthumb(videoid, user_id):
         Xcenter = youtube.width / 2
         Ycenter = youtube.height / 2
         x1 = Xcenter - 250
-        y1 = Ycenter - 250
+        y1 = Ycenter - 240
         x2 = Xcenter + 250
-        y2 = Ycenter + 250
+        y2 = Ycenter + 240
         logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((520, 520), Image.ANTIALIAS)
         logo.save(f"cache/chop{videoid}.png")
@@ -249,8 +249,8 @@ async def gen_qthumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((365, 365), Image.ANTIALIAS)
-        width = int((1280 - 365) / 2)
+        logo.thumbnail((500, 500), Image.ANTIALIAS)
+        width = int((1280 - 550) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 138), mask=logo)
         background.paste(x, (710, 427), mask=x)
