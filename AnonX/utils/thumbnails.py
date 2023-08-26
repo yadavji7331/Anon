@@ -219,7 +219,7 @@ async def gen_qthumb(videoid, user_id):
         d = np.array(a)
         e = np.dstack((c, d))
         f = Image.fromarray(e)
-        x = f.resize((107, 107))
+        x = f.resize((480, 480))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
         bg = Image.open(f"AnonX/assets/anonx.png")
@@ -257,11 +257,11 @@ async def gen_qthumb(videoid, user_id):
         background.paste(image3, (2, 2), mask=image3)
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
-        ImageFont.truetype("AnonX/assets/font2.ttf", 70)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 30)
-        ImageFont.truetype("AnonX/assets/font.ttf", 30)
-        para = textwrap.wrap(title, width=32)
+        font = ImageFont.truetype("AnonX/assets/font2.ttf", 40)
+        ImageFont.truetype("AnonX/assets/font2.ttf", 65)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 27)
+        ImageFont.truetype("AnonX/assets/font.ttf", 27)
+        para = textwrap.wrap(title, width=30)
         try:
             draw.text(
                 (455, 25),
