@@ -267,14 +267,14 @@ async def gen_qthumb(videoid, user_id):
                 (455, 25),
                 "ADDED TO QUEUE",
                 fill="white",
-                stroke_width=5,
+                stroke_width=3,
                 stroke_fill="black",
                 font=font,
             )
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 2, 530),
+                    ((1280 - text_w) / 1.07, 380),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -284,7 +284,7 @@ async def gen_qthumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 2, 580),
+                    ((1280 - text_w) / 1.07, 420),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -295,7 +295,7 @@ async def gen_qthumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - text_w) / 2, 660),
+            ((1280 - 50) / 1.10, 540),
             f"Duration: {duration} Mins",
             fill="white",
             font=arial,
