@@ -219,7 +219,7 @@ async def gen_qthumb(videoid, user_id):
         d = np.array(a)
         e = np.dstack((c, d))
         f = Image.fromarray(e)
-        x = f.resize((107, 107))
+        x = f.resize((470, 470))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
         bg = Image.open(f"AnonX/assets/anonx.png")
@@ -236,9 +236,9 @@ async def gen_qthumb(videoid, user_id):
         Xcenter = youtube.width / 2
         Ycenter = youtube.height / 2
         x1 = Xcenter - 250
-        y1 = Ycenter - 250
+        y1 = Ycenter - 240
         x2 = Xcenter + 250
-        y2 = Ycenter + 250
+        y2 = Ycenter + 240
         logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((520, 520), Image.ANTIALIAS)
         logo.save(f"cache/chop{videoid}.png")
@@ -249,19 +249,19 @@ async def gen_qthumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((365, 365), Image.ANTIALIAS)
-        width = int((1280 - 365) / 2)
+        logo.thumbnail((500, 500), Image.ANTIALIAS)
+        width = int((1280 - 500) / 1.10)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 2, 138), mask=logo)
-        background.paste(x, (710, 427), mask=x)
+        background.paste(logo, (width + 2, 20), mask=logo)
+        background.paste(x, (135, 135), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
-        font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
-        ImageFont.truetype("AnonX/assets/font2.ttf", 70)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 30)
-        ImageFont.truetype("AnonX/assets/font.ttf", 30)
-        para = textwrap.wrap(title, width=32)
+        font = ImageFont.truetype("AnonX/assets/font2.ttf", 40)
+        ImageFont.truetype("AnonX/assets/font2.ttf", 65)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 27)
+        ImageFont.truetype("AnonX/assets/font.ttf", 27)
+        para = textwrap.wrap(title, width=30)
         try:
             draw.text(
                 (455, 25),
@@ -274,7 +274,7 @@ async def gen_qthumb(videoid, user_id):
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 2, 530),
+                    ((1280 - text_w) / 1.07, 380),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -284,7 +284,7 @@ async def gen_qthumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 2, 580),
+                    ((1280 - text_w) / 1.07, 420),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -295,8 +295,8 @@ async def gen_qthumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - text_w) / 2, 660),
-            f"Duration: {duration} Mins",
+            ((1280 - 50) / 1.10, 540),
+            f"{duration}",
             fill="white",
             font=arial,
         )
