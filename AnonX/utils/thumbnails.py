@@ -250,7 +250,7 @@ async def gen_qthumb(videoid, user_id):
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
         logo.thumbnail((800, 800), Image.ANTIALIAS)
-        width = int((1280 - 800) / 1.10)
+        width = int((1280 - 800) / 1)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 20), mask=logo)
         background.paste(x, (97, 69), mask=x)
