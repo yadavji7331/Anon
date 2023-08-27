@@ -112,7 +112,7 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((500, 500), Image.ANTIALIAS)
         width = int((1280 - 500) / 1.10)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 2, 18), mask=logo)
+        background.paste(logo, (width + 2, 20), mask=logo)
         background.paste(x, (135, 135), mask=x)
         background.paste(image3, (2, 2), mask=image3)
 
@@ -125,7 +125,7 @@ async def gen_thumb(videoid, user_id):
         try:
             draw.text(
                 (450, 25),
-                f"STARTED PLAYING",
+                f"",
                 fill="white",
                 stroke_width=3,
                 stroke_fill="grey",
@@ -265,7 +265,7 @@ async def gen_qthumb(videoid, user_id):
         try:
             draw.text(
                 (455, 25),
-                "ADDED TO QUEUE",
+                "",
                 fill="white",
                 stroke_width=5,
                 stroke_fill="black",
