@@ -79,7 +79,7 @@ async def gen_thumb(videoid, user_id):
         d = np.array(a)
         e = np.dstack((c, d))
         f = Image.fromarray(e)
-        x = f.resize((480, 480))
+        x = f.resize((250, 250))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
         bg = Image.open(f"AnonX/assets/anonx.png")
@@ -109,8 +109,8 @@ async def gen_thumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((500, 500), Image.ANTIALIAS)
-        width = int((1280 - 500) / 1.10)
+        logo.thumbnail((400, 400), Image.ANTIALIAS)
+        width = int((1280 - 400) / 1.10)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 20), mask=logo)
         background.paste(x, (135, 60), mask=x)
