@@ -113,7 +113,7 @@ async def gen_thumb(videoid, user_id):
         width = int((1280 - 500) / 1.10)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 20), mask=logo)
-        background.paste(x, (135, 135), mask=x)
+        background.paste(x, (97, 69), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
@@ -253,7 +253,7 @@ async def gen_qthumb(videoid, user_id):
         width = int((1280 - 500) / 1.10)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 20), mask=logo)
-        background.paste(x, (135, 135), mask=x)
+        background.paste(x, (97, 69), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
