@@ -112,8 +112,8 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((500, 500), Image.ANTIALIAS)
         width = int((1280 - 500) / 11)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 5, 100), mask=logo)
-        background.paste(x, (850, 180), mask=x)
+        background.paste(logo, (width + 11, 100), mask=logo)
+        background.paste(x, (850, 170), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
