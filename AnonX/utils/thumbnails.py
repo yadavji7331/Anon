@@ -79,7 +79,7 @@ async def gen_thumb(videoid, user_id):
         d = np.array(a)
         e = np.dstack((c, d))
         f = Image.fromarray(e)
-        x = f.resize((480, 480))
+        x = f.resize((280, 280))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
         bg = Image.open(f"AnonX/assets/anonx.png")
@@ -110,10 +110,10 @@ async def gen_thumb(videoid, user_id):
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
         logo.thumbnail((500, 500), Image.ANTIALIAS)
-        width = int((1280 - 500) / 7)
+        width = int((1280 - 500) / 9)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 2, 50), mask=logo)
-        background.paste(x, (700, 200), mask=x)
+        background.paste(x, (900, 200), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
@@ -134,7 +134,7 @@ async def gen_thumb(videoid, user_id):
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 1.07, 380),
+                    ((1280 - text_w) / 1.07, 38000),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -144,7 +144,7 @@ async def gen_thumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - text_w) / 1.07, 420),
+                    ((1280 - text_w) / 1.07, 42000),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -155,7 +155,7 @@ async def gen_thumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - 50) / 1.10, 540),
+            ((1280 - 50) / 1.10, 54000),
             f"{duration}",
             fill="white",
             font=arial,
