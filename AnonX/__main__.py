@@ -57,7 +57,7 @@ async def init():
         )
     except NoActiveGroupCall:
         LOGGER("AnonX").error(
-            "[ERROR] - \n\nHey Baby, firstly open telegram and turn on voice chat in Logger Group else fu*k off. If you ever ended voice chat in log group i will stop working and users will fu*k you up."
+            "[ERROR] - \n\nHᴇʏ Bᴀʙʜ, Fɪʀsᴛʟʏ Oᴘᴇɴ Tᴇʟᴇɢʀᴀᴍ Aɴᴅ Tᴜʀɴ Oɴ Vᴏɪᴄᴇ Cʜᴀᴛ Iɴ Lᴏɢɢᴇʀ Gʀᴏᴜᴘ ᴇʟsᴇ F*ᴄᴋ Oғғ. Iғ Yᴏᴜ Eᴠᴇʀ Eɴᴅᴇᴅ Vᴏɪᴄᴇ Cʜᴀᴛ Iɴ Lᴏɢ Gʀᴏᴜᴘ I Wɪʟʟ Sᴛᴏᴘ Wᴏʀᴋɪɴɢ Aɴᴅ Usᴇʀs Wɪʟʟ Fᴜ*ᴋ Yᴏᴜ Uᴘ."
         )
         sys.exit()
     except:
@@ -69,5 +69,5 @@ async def init():
 
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("AnonX").info("Stopping Music Bot...")
+    LOGGER("AnonX").info("Sᴛᴏᴘɪɴɢ Dᴀxx Mᴜsɪᴄ Bᴏᴛ...")
     
