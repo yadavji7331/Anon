@@ -82,7 +82,7 @@ async def gen_thumb(videoid, user_id):
         x = f.resize((380, 380))
 
         youtube = Image.open(f"cache/thumb{videoid}.png")
-        bg = Image.open(f"AnonX/assets/bg.png")
+        bg = Image.open(f"AnonX/assets/anonx.png")
         image1 = changeImageSize(1280, 720, youtube)
         image2 = image1.convert("RGBA")
         background = image2.filter(filter=ImageFilter.BoxBlur(30))
@@ -109,8 +109,8 @@ async def gen_thumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((400, 650), Image.ANTIALIAS)
-        width = int((1280 - 400) / 1.20)
+        logo.thumbnail((600, 600), Image.ANTIALIAS)
+        width = int((1280 - 600) / 1.10)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 1 ,0), mask=logo)
         background.paste(x, (130, 170), mask=x)
