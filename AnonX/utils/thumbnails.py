@@ -25,7 +25,7 @@ def changeImageSize(maxWidth, maxHeight, image):
 def add_corners(im):
     bigsize = (im.size[0] * 3, im.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
-    ImageDraw.Draw(mask).rectangle((2, 2) + bigsize, fill=255)
+    ImageDraw.Draw(mask).rectangle((5, 3) + bigsize, fill=255)
     mask = mask.resize(im.size, Image.ANTIALIAS)
     mask = ImageChops.darker(mask, im.split()[-1])
     im.putalpha(mask)
@@ -112,9 +112,9 @@ async def gen_thumb(videoid, user_id):
         logo.thumbnail((500, 500), Image.ANTIALIAS)
         width = int((1280 - 1020) / 1)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 1 ,100), mask=logo)
+        background.paste(logo, (width + 1 ,80), mask=logo)
         background.paste(x, (850, 1700), mask=x)
-        background.paste(image3, (0, 0), mask=image3)
+        background.paste(image3, (5, 3), mask=image3)
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("AnonX/assets/font2.ttf", 40)
