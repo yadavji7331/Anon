@@ -25,7 +25,7 @@ def changeImageSize(maxWidth, maxHeight, image):
 def add_corners(im):
     bigsize = (im.size[0] * 3, im.size[1] * 3)
     mask = Image.new("L", bigsize, 0)
-    ImageDraw.Draw(mask).rectangle((8, 5) + bigsize, fill=255)
+    ImageDraw.Draw(mask).rectangle((9, 9) + bigsize, fill=255)
     mask = mask.resize(im.size, Image.ANTIALIAS)
     mask = ImageChops.darker(mask, im.split()[-1])
     im.putalpha(mask)
@@ -100,7 +100,7 @@ async def gen_thumb(videoid, user_id):
         x2 = Xcenter + 250
         y2 = Ycenter + 240
         logo = youtube.crop((x1, y1, x2, y2))
-        logo.thumbnail((520, 520), Image.ANTIALIAS)
+        logo.thumbnail((1280, 720), Image.ANTIALIAS)
         logo.save(f"cache/chop{videoid}.png")
         if not os.path.isfile(f"cache/cropped{videoid}.png"):
             im = Image.open(f"cache/chop{videoid}.png").convert("RGBA")
@@ -110,11 +110,11 @@ async def gen_thumb(videoid, user_id):
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
         logo.thumbnail((500, 500), Image.ANTIALIAS)
-        width = int((1280 - 1020) / 1)
+        width = int((1280 - 1220) / 1)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 1 ,60), mask=logo)
         background.paste(x, (850, 1700), mask=x)
-        background.paste(image3, (8, 5), mask=image3)
+        background.paste(image3, (9, 9), mask=image3)
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("AnonX/assets/font2.ttf", 40)
