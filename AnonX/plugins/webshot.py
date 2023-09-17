@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Romeo import app
-from Romeo.utils.errors import capture_err
+from AnonX import app
+from AnonX.utils.errors import capture_err
 
 
 @app.on_message(filters.command("webss"))
