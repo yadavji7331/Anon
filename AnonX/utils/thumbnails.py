@@ -93,8 +93,8 @@ async def gen_thumb(videoid, user_id):
         image5 = image3.convert("RGBA")
         Image.alpha_composite(background, image5).save(f"cache/temp{videoid}.png")
 
-        Xcenter = youtube.width / 2
-        Ycenter = youtube.height / 2
+        Xcenter = youtube.width / 4
+        Ycenter = youtube.height / 4
         x1 = Xcenter - 250
         y1 = Ycenter - 240
         x2 = Xcenter + 250
