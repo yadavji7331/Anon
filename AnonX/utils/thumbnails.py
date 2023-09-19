@@ -124,7 +124,7 @@ async def gen_thumb(videoid, user_id):
         para = textwrap.wrap(title, width=32)
         try:
             draw.text(
-                (550, 326),
+                (555, 326),
             f"{channel} | {views[:23]}",
             (255, 255, 255),
             font=arial,
@@ -132,7 +132,7 @@ async def gen_thumb(videoid, user_id):
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - 740) / 1, 228),
+                    ((1280 - 740) / 1, 218),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -142,7 +142,7 @@ async def gen_thumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - 740) / 1, 268),
+                    ((1280 - 740) / 1, 258),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -153,7 +153,7 @@ async def gen_thumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - 190) / 1, 400),
+            ((1280 - 190) / 1, 410),
             f"             {duration} ",
             fill="white",
             font=arial,
