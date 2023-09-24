@@ -1,7 +1,9 @@
 # Copyright (C) 2021 By DAXXSIR
 
-import os
-from config import  
+from pyrogram import Client, filters
+from pyrogram.types import Message
+
+from AnonX import app  
 class Messages():
   INFO_MSG = [
     ".",
