@@ -1,7 +1,7 @@
 # Copyright (C) 2021 By DAXXSIR
 
 import os
-from config import  UPDATES_CHANNEL, GROUP_SUPPORT, BOT_NAME,
+from config import  
 class Messages():
   INFO_MSG = [
     ".",
